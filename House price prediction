@@ -9,7 +9,6 @@ data = pd.DataFrame({
     'Location': ['Urban', 'Suburban', 'Rural', 'Urban'],
     'Price': [120000, 150000, 130000, 200000]
 })
-
 X = data[['Size(sqft)', 'Location']]
 y = data['Price']
 
@@ -29,3 +28,4 @@ new_data = pd.DataFrame({'Size(sqft)': [1300], 'Location': ['Suburban']})
 pred_price = model.predict(preprocessor.transform(new_data))[0]
 
 print("Predicted price for 1300 sqft Suburban house:", round(pred_price, 2))
+
